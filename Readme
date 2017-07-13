@@ -1,0 +1,35 @@
+Qplayer.py:Q-player which donot have symmetry and after-state which consists of train function and trainall function used to train the player.
+
+QAfterStatePlayer.py : Qplayer with after-state and symmetry
+
+Environment.py :  environment used for tic-tac-toe having functions step,reset
+
+Board.py : Board which contains functions to check if game is over and to find the valid moves for a particular board position.
+
+Train.py : Is used to train  with a  players like  ensemble or random or safe.
+
+Play.py : Q player which was trained can be played with random,safe or min-max player
+
+BestPlayer.py : contains how the q values for min-max are found?
+
+Player.py : Contains functions for random,safe player moves
+
+
+How to train a player:(ex: random player)
+
+* open QAfterStatePlayer.py
+* In __init__ function comment line(10) having np.load()
+* remove the comment for line(11) self.q={} if it is commented.
+* In train function in line(142) having np.save() if you want to change the name of numpy file, change the name.
+* open train.py , QA.train(Rp) for training with random player and run it 
+* python train.py
+
+
+How to play after training? (ex: Random player)
+
+* In __init__ function remove the comment for line(10) having np.load() and give the name of numpy file in load
+* comment the line(11) having self.q={} if it is not commented.
+* open play.py and run it(change the player with which you want to run)
+* python play.py
+
+
